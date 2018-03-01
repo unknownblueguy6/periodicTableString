@@ -1,0 +1,141 @@
+89Ac Actinium
+47Ag Silver
+13Al Aluminium
+95Am Americium
+18Ar Argon
+33As Arsenic
+85At Astatine
+79Au Gold
+
+5B Boron
+56Ba Barium
+4Be Beryllium
+107Bh Bohrium
+83Bi Bismuth
+97Bk Berkelium
+35Br Bromine
+
+6C Carbon
+20Ca Calcium
+48Cd Cadmium
+58Ce Cerium
+98Cf Californium
+17Cl Chlorine
+96Cm Curium
+112Cn Copernicium
+27Co Cobalt
+24Cr Chromium
+55Cs Cesium
+29Cu Copper
+
+105Db Dubnium
+110Ds Darmstadtium
+66Dy Dysprosium
+
+68Er Erbium
+99Es Einsteinium
+63Eu Europium
+
+9F Fluorine
+26Fe Iron
+114Fl Flerovium
+100Fm Fermium
+87Fr Francium
+
+31Ga Gallium
+64Gd Gadolinium
+32Ge Germanium
+
+1H Hydrogen
+2He Helium
+72Hf Hafnium
+80Hg Mercury
+67Ho Holmium
+108Hs Hassium
+
+53I Iodine
+49In Indium
+77Ir Iridium
+
+19K Potassium
+36Kr Krypton
+
+57La Lanthanum
+3Li Lithium
+103Lr Lawrencium
+71Lu Lutetium
+116Lv Livermorium
+
+115Mc Moscovium
+101Md Mendelevium
+12Mg Magnesium
+25Mn Manganese
+42Mo Molybdenum
+109Mt Meitnerium
+
+7N Nitrogen
+11Na Sodium
+41Nb Niobium
+60Nd Neodymium
+10Ne Neon
+113Nh Nihonium
+28Ni Nickel
+102No Nobelium
+93Np Neptunium
+
+8O Oxygen
+118Og Oganesson
+76Os Osmium
+
+15P Phosphorus
+91Pa Protactinium
+82Pb Lead
+46Pd Palladium
+61Pm Promethium
+84Po Polonium
+59Pr Praseodymium
+78Pt Platinum
+94Pu Plutonium
+
+88Ra Radium
+37Rb Rubidium
+75Re Rhenium
+104Rf Rutherfordium
+111Rg Roentgenium
+45Rh Rhodium
+86Rn Radon
+44Ru Ruthenium
+
+16S Sulfur
+51Sb Antimony
+21Sc Scandium
+34Se Selenium
+106Sg Seaborgium
+14Si Silicon
+62Sm Samarium
+50Sn Tin
+38Sr Strontium
+
+73Ta Tantalum
+65Tb Terbium
+43Tc Technetium
+52Te Tellurium
+90Th Thorium
+22Ti Titanium
+81Tl Thallium
+69Tm Thulium
+117Ts Tennessine
+
+92U Uranium
+
+23V Vanadium
+
+74W Tungsten
+
+54Xe Xenon
+
+39Y Yttrium
+70Yb Ytterbium
+
+30Zn Zinc
+40Zr Zirconium
