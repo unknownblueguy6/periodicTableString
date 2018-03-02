@@ -4,4 +4,6 @@ A program which checks whether a given string can be formed from the elements of
 
 periodic.txt is the raw input. A sorting program is run to generate sorted.txt (only once), which is used by the main program to run.
 
-Currently, the program cannot output all possibilities. (to be added later)
+Currently, the program cannot output all possibilities.
+
+The program accepts input with no spaces. (will be incorporated later)
