@@ -70,6 +70,7 @@ bool inTable(string a){
 	else{
 		char b = toupper(a[0]), c = tolower(a[1]);
 		unsigned i = 0;
+		
 		while (true){
 			if (sortedTable[int(b)-65][i].sym.length() == 0){
 				return false;
@@ -82,37 +83,83 @@ bool inTable(string a){
 	}
 }
 
-// pair<bool, string> checker(string input){
-// 	if (input.find('q') == -1 || input.find('Q') == -1 || input.find('J') == -1 || input.find('j') == -1){
-// 		return make_pair(false, "Not possible");
-// 	}
-	
-// 	if (input.length() == 1){
-// 		if inTable(input){
-// 			answer += input;
-// 			return make_pair(true, answer)
-// 		}
-// 		else{
-// 			return make_pair(false, answer)
-// 		}
-// 	}
+pair<bool, string> resultCombiner(pair<bool, string> r1, pair<bool, string> r2){
+	if (r1.first && r2.first){
+		return make_pair(true, r1.second+r2.second);
+	}
+	return make_pair(false, "");
+}
 
-// 	if(input.length() == 2){
-// 		if inTable(input){
-// 			answer += input;
-// 			return make_pair(true, answer)
-// 		}
-// 		else{
-// 			return make_pair(false, answer)
-// 		}
-// 	}
-// 	if input.len % 2 == 1
-// }
+pair<bool, string> checker(string input){
+	if (!(input.find('q') == -1 || input.find('Q') == -1 || input.find('J') == -1 || input.find('j') == -1)){ 
+		return make_pair(false, "");
+	}
+
+	static unsigned len = input.length();
+	
+	if (input.length() == 1){
+		if (inTable(input)){
+			input[0] = toupper(input[0]);
+			
+			return make_pair(true, input);
+		}
+		else{
+			
+			return make_pair(false, "");
+		}
+	}
+
+	if(input.length() == 2){
+
+		if (inTable(input)){
+			input[0] = toupper(input[0]);
+			input[1] = tolower(input[1]);
+			
+			return make_pair(true, input);
+		}
+		else{
+			pair <bool, string> result = resultCombiner(checker(input.substr(0, 1)), checker(input.substr(1, 1) ));
+			if (result.first){
+				return result;
+			}
+			return make_pair(false, "");
+		}
+	}
+	
+	if (input.length() % 2){ 
+		pair<bool, string> result = resultCombiner(checker(input.substr(0, input.length()/2)), checker(input.substr(input.length()/2, input.length() - input.length()/2)));
+		if(!result.first){
+			result = resultCombiner(checker(input.substr(0, input.length()/2 + 1)), checker(input.substr(input.length()/2 + 1, input.length() - input.length()/2 - 1)));
+		}
+		if (result.first && result.second.length() == len){
+			cout << result.second << endl;
+		}
+		
+		return result;
+	}
+
+	else{
+		pair<bool, string> result = resultCombiner(checker(input.substr(0, input.length()/2-1)), checker(input.substr(input.length()/2-1, input.length() - input.length()/2 + 1)));	
+		if(!result.first){
+			result = resultCombiner(checker(input.substr(0, input.length()/2 + 1)), checker(input.substr(input.length()/2 + 1, input.length() - input.length()/2 - 1)));
+		}
+		if(!result.first){
+			result = resultCombiner(checker(input.substr(0, input.length()/2)), checker(input.substr(input.length()/2, input.length()/2)));
+		}
+		if (result.first && result.second.length() == len){
+			cout << result.second << endl;
+		}
+		return result;
+	}
+}
 
 int main(){
 	getSortedTable();
-	// string input;
-	// getline(cin, input);
-	
+	string input;
+	getline(cin, input);
+	pair <bool, string> result;
+
+	result = checker(input);
+	//cout << result.second;
 	return 0;
 }
