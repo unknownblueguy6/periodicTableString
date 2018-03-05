@@ -202,22 +202,32 @@ set <periodic> elementsUsed(string word){
 
 int main(){
 	getSortedTable();
-	
-	string input;
+	bool flag = false;
+	string word, converted = "";
+	vector <string> words; 
 	cout << "Enter the string to be tested : " << endl;
-	getline(cin, input);
+	while (cin.peek() != '\n') {
+  		cin >> word;
+  		words.push_back(word);
+  	}
 	cout << endl;
 	pair <bool, string> result;
-
-	result = checker(input);
-	if (!result.first){
+	for(auto input : words){
+		result = checker(input);
+		if (!result.first){
+			flag = true;
+			break;
+		}
+		converted += result.second + ' ';
+	}
+	if (flag){
 		cout << "No possible combination.";
 	}
 	else{
 		cout << "A possible combination is : " << endl;
-		cout << result.second << endl << endl;;
+		cout << converted << endl << endl;;
 		cout << "Number\t\tSymbol\t\tElement" << endl;  
-		for(auto element : elementsUsed(result.second)){
+		for(auto element : elementsUsed(converted)){
 	 		cout << element.num << "\t\t" << element.sym << "\t\t" << element.name << endl;
 		}
 	}
