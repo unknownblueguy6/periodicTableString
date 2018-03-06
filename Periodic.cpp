@@ -5,7 +5,8 @@
 #include <cctype>
 #include <utility>
 #include <algorithm>
-#include <set> 
+#include <set>
+#include <vector>
 
 using namespace std;
 
