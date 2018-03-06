@@ -6,4 +6,4 @@ periodic.txt is the raw input. A sorting program is run to generate sorted.txt (
 
 Currently, the program cannot output all possibilities.
 
-The program accepts input with no spaces. (will be incorporated later)
+The program accepts spaces.
